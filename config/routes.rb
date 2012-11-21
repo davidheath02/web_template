@@ -1,4 +1,25 @@
 Enterprise::Application.routes.draw do
+  get "orderitems/index"
+
+  get "orderitems/show"
+
+  get "orderitems/new"
+
+  get "orderitems/edit"
+
+ # resources :orders
+resources :orders do
+  resources :orderitems
+  
+end
+
+  devise_for :users do
+resources :orders
+end
+resources :orders do
+resources :orderitems
+end
+
   get "cart/index"
 
   get "site/about"
@@ -16,8 +37,8 @@ match '/cart' => 'cart#index'
 match '/cart/:id' => 'cart#add'
 match '/cart/remove/:id' => 'cart#remove'
 match '/clearCart' => 'cart#clearCart'
-
-
+match '/checkout' => 'cart#createOrder'
+root :to => 'site#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
