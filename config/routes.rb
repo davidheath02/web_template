@@ -1,4 +1,6 @@
 Enterprise::Application.routes.draw do
+  resources :profiles
+
   get "orderitems/index"
 
   get "orderitems/show"
@@ -27,6 +29,8 @@ end
   get "site/contact"
 
   get "site/home"
+  
+  get "items/category"
 
   resources :items
 
@@ -38,7 +42,15 @@ match '/cart/:id' => 'cart#add'
 match '/cart/remove/:id' => 'cart#remove'
 match '/clearCart' => 'cart#clearCart'
 match '/checkout' => 'cart#createOrder'
+
+match '/Admin' => 'user#admin_login'
+match '/logout' => 'user#logout'
+
+match '/myprofile' => 'profiles#myprofile'
+
+match '/category/:id' => 'items#category'
 root :to => 'site#home'
+#root :to => 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

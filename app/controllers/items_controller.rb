@@ -1,7 +1,13 @@
 class ItemsController < ApplicationController
-  before_filter :authenticate_user!
+  
+
+  
   # GET /items
   # GET /items.json
+  
+   # before_filter :authenticate_user!
+    before_filter :ensure_admin, :only => [:new, :create, :edit, :destroy]
+    
   def index
     @items = Item.all
 
@@ -81,4 +87,20 @@ class ItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def category
+    @items = Item.find_all_by_category(params[:id])
+    @category = params[:id]
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @items }
+    end
+  end
+  
+  def ensure_admin
+    unless current_user && current_user.admin?
+    render :text => "Access Error Message", :status => :unauthorized
+    end
+  end
+
 end
