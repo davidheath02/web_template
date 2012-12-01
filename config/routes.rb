@@ -10,12 +10,12 @@ Enterprise::Application.routes.draw do
   get "orderitems/edit"
 
  # resources :orders
-resources :orders do
-  resources :orderitems
+#resources :orders do
+ # resources :orderitems
   
-end
+#end
 
-  devise_for :users do
+devise_for :users do
 resources :orders
 end
 resources :orders do

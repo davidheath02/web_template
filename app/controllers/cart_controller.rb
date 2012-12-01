@@ -44,11 +44,11 @@ def clearCart
   session[:cart] = nil
     redirect_to :action => :index
 end
-end
+
 
 def createOrder
 # Step 1: Get the current user
-  @user = User.find(current_user.id)
+  @user = current_user
 # Step 2: Create a new order and associate it with the current user
     @order = @user.orders.build(:order_date => DateTime.now)
     @order.save
@@ -60,8 +60,9 @@ def createOrder
       @orderitem.save
       
    end
-end
+ end
 
+end
 
 
 

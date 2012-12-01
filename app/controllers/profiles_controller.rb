@@ -24,7 +24,9 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   # GET /profiles/new.json
   def new
+    @user = User.find(current_user.id)
     @profile = Profile.new
+    @profile.user_id = @user.id
 
     respond_to do |format|
       format.html # new.html.erb
