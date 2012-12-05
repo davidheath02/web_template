@@ -102,5 +102,15 @@ class ItemsController < ApplicationController
     render :text => "Access Error Message", :status => :unauthorized
     end
   end
+def search
+     @search_term = params[:q]
+     st = "%#{params[:q]}%"
+     @items = Item.where("Title like ? or Description like ?", st, st)
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @items }
+    end
+  end
 
 end
