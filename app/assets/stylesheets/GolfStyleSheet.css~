@@ -119,7 +119,7 @@ div#header {
     border-bottom: none;
     background-image: url("/assets/webtemplate_header.jpg") ;
     width: 970px;
-    height: 100px;
+    height: 70px;
 }
 div#footer {
     border-top: none;
