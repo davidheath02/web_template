@@ -87,24 +87,8 @@ div#first-column {
     margin: 3px;
 }
 div#first-column {
-    left: 460px;
+    left: 710px;
 }
-
-div#second-column {
-    margin: 3px 3px 3px 3px;
-    position: absolute;
-    top: 0;
-    bottom: 0px;
-    /*border: 1px solid gray;*/
-    /*background: rgb(240, 240, 240);*/
-    background-image: url("/assets/Site/bg3.gif");
-    width: 279px;
-    margin: 3px;
-}
-div#second-column {
-    left: 700px;
-}
-
 div#content {
 	left: 0;
     margin: 3px 3px 3px 5px;
@@ -152,7 +136,7 @@ div.searchbox {
 	border: 1px solid gray;
 	margin: 0px 0px 30px 5px;
 	padding: 5px;
-	height: 120px;
+	height: 55px;
 }
 
 /* ------------------------- */

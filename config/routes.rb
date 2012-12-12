@@ -49,6 +49,10 @@ match '/logout' => 'user#logout'
 match '/myprofile' => 'profiles#myprofile'
 
 match '/category/:id' => 'items#category'
+
+match '/search' => 'items#search'
+
+
 root :to => 'site#home'
 #root :to => 'home#index'
 
