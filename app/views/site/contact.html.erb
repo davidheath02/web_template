@@ -1,2 +1,78 @@
-<h1>Site#contact</h1>
-<p>Find me in app/views/site/contact.html.erb</p>
+<script>
+      
+    function validate() {
+
+        if (document.getElementById("business").value == "" || document.getElementById("business").value == null)
+        {
+          window.alert("Please enter your name");
+          document.getElementById("business").focus();
+          return false;
+        }
+		
+		if (document.getElementById("address").value == "" || document.getElementById("address").value == null)
+        {
+          window.alert("Please enter your address");
+          document.getElementById("address").focus();
+          return false;
+        }
+		
+		if (document.getElementById("phone").value == "" || document.getElementById("phone").value == null)
+        {
+          window.alert("Please enter your phone number");
+          document.getElementById("phone").focus();
+          return false;
+        }
+
+        if (document.getElementById("email").value == "" || document.getElementById("email").value == null)
+        {
+          window.alert("Please enter your email address");
+          document.getElementById("name").focus();
+          return false;
+        }
+
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var address = document.getElementById("email").value;
+        if(reg.test(address) == false) {
+            alert('Invalid Email Address');
+            return false;
+        }
+
+        if (document.getElementById("description").value == "" || document.getElementById("description").value == null)
+        {
+          window.alert("Please describe your business.");
+          document.getElementById("name").focus();
+          return false;
+        }
+
+        }
+
+</script>
+
+
+<form id = "form_profile">
+<div>
+<h3>Please contact us using the form below.</h3>
+<br/>
+<label>
+<span>Your  name:</span> <br>
+<input id ="business" type="text" name="business"><br>
+</label>
+<label>
+<span>Address:</span> <br>
+<input id ="address" type="text" name="address"><br>
+</label>
+<label>
+<span>Phone:</span> <br>
+<input id ="phone" type="text" name="phone"><br>
+</label>
+<label>
+<span>Email:</span> <br>
+<input id ="email" type="text" name="email"><br>
+</label>
+<label>
+<span>Description:</span> <br>
+<textarea id ="description" name="description"></textarea>
+</label><br><br>
+<input class = "button" type="button" value="Submit Profile" onclick = "validate()">
+</div>
+</form>
