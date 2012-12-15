@@ -1,7 +1,7 @@
 body {
 	
 }
-/* just a test */
+
 img.floatLeft { 
     float: left; 
     margin: 4px; 
@@ -54,8 +54,8 @@ h2.BoxHeaders {
 }  
 
 body {
-    /* background: white;*/
-    background-image: url("bg5.gif");
+    /* background: white;
+    background-image: url("bg5.gif");*/
     background: rgb(0, 0, 0);
     font-family: sans-serif;
     margin: 0;
@@ -70,54 +70,27 @@ div#container {
     min-height: 700px;
     border: 1px solid gray;
     /*background: lightgrey;*/
-  background: #FCE7B7; 
+    background-image: url("/assets/Site/bg3.gif");
     max-width: 1000px;
     min-width: 750px;
     margin: auto;
 }
-
-#third-column
-{padding-top:4px;
-float:left;
-width:600px;}
-
-div.searchbox {
-	border: 0px solid gray;
-	margin: 0px 0px 30px 5px;
-	padding: 5px;
-	height: 120px;
-}
-
 div#first-column {
 	margin: 3px 3px 3px 3px;
-    position: relative;
+    position: absolute;
     top: 0;
     bottom: 0px;
     /*border: 1px solid gray;*/
     /*background: rgb(240, 240, 240);*/
-    background-image: url("/assets/Site/biege.png");
+    background-image: url("/assets/Site/bg3.gif");
     width: 279px;
     margin: 3px;
 }
 div#first-column {
-    left: 460px;
+    left: 710px;
 }
-
-div#second-column {
-    margin: 3px 3px 3px 3px;
-    position: absolute;
-    top: 95px;
-    bottom: 0px;
-    /*border: 1px solid gray;*/
-    /*background: rgb(240, 240, 240);*/
-    background: #FCE7B7;
-    width: 279px;
-    margin: 3px;
-	left: 700px;
-}
-
 div#content {
-	float:left;
+	left: 0;
     margin: 3px 3px 3px 5px;
     padding: 10px;
     /*background: rgb(240, 240, 240);*/
@@ -126,20 +99,6 @@ div#content {
     min-height: 200px;
     width: 350px;
 }
-
-#categories {
-    clear:both;
-    margin: 3px 3px 3px 3px;
-
-    position: absolute;
-    top: 90px;
-    bottom: 0px;
-
-    width: 279px;
-    margin: 3px;
-	left: 377px;
-}
-
 div#header,
 div#footer,
 div#menu {
@@ -167,13 +126,18 @@ div#footer {
 }
 
 div.box {
-	border: 0px solid gray;
-	margin: 50px 0px 30px 5px;
-	padding: 15px;
+	border: 1px solid gray;
+	margin: 0px 0px 30px 5px;
+	padding: 5px;
 	height: 200px;
         }
-		
 
+div.searchbox {
+	border: 1px solid gray;
+	margin: 0px 0px 30px 5px;
+	padding: 5px;
+	height: 55px;
+}
 
 /* ------------------------- */
 #navbar
