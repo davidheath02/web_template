@@ -31,7 +31,7 @@
 %>)	</div>
 <% else %>
 <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
-<% end %>
+<% end %>.
 		
             </div>
             
@@ -62,11 +62,16 @@
 	    </div>
 
 	      <div id='third-column'>		
-             	<div class="searchbox">
+             		<div class="searchbox">
    				<h2 class="BoxHeaders">Search</h2>
-  				 <%= render :partial => 'items/search' %>
-				</div>
-	      </div>
+  				<%= render :partial => 'items/search' %>
+			</div>
+		
+			<div id="image">
+				<h2>Your Cart</h2>
+				<%= render :partial => '/cart/cart', :locals => { :cart => @cart } %>
+			</div>
+	       </div>
 
             </div>
 
