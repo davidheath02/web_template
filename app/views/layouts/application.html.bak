@@ -16,6 +16,7 @@
 <ul>
 <li><a href="/home">Home</a></li>
 <li><a href="/items">Web Templates</a></li>
+<li><a href="/about">About</a></li>
 <li><a href="/contact">Contact Us</a></li>
 <li><%= link_to 'login', new_user_session_path %></li>
 <li><%= link_to 'logout', destroy_user_session_path, :method => :delete %></li>
@@ -42,10 +43,8 @@
             	<div class="searchbox">
             		<h2 class="BoxHeaders">Categories</h2>
             		<%= render '/items/categoryDistinctList' %>
+            		<input type="text" name="search" /><input type="submit" value="Search" />
             	</div>
-	    </div>
-
-            <div id='second-column'>
             	<div class="box">
             		<h2 class="BoxHeaders">Sample Site</h2>
             		<img src="/assets/adventure_sport.jpg" name="Rotating" id="Rotating1" alt="Adventure Sport">
@@ -54,22 +53,17 @@
             			RotateImages(1,0);
             		</script>
             	</div>
-            
             	<div class="box">
             		<h2 class="BoxHeaders">Newly Published</h2>
             		<img src="/assets/cakes.jpg" alt="Cakes">
             	</div>
-	    </div>
-
-	      <div id='third-column'>		
              	<div class="searchbox">
    				<h2 class="BoxHeaders">Search</h2>
   				 <%= render :partial => 'items/search' %>
 				</div>
-	      </div>
 
             </div>
-
+        </div>
         <div id='footer'>
             <h6 class="footertext">&copy; NCI Web Design Inc&trade; 2003</h6>
         </div>
