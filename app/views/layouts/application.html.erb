@@ -39,35 +39,29 @@
 			
 
 			
-			<div id='third-column'>		
+	<div id='third-column'>		
              	<div class="searchbox">
    				<h2 class="BoxHeaders">Search</h2>
-  				 <%= render :partial => 'items/search' %>
-				</div>
-				
-				<div id="image">
-				<h2>Your Cart</h2>
-				<%= render :partial => '/cart/cart', :locals => { :cart => @cart } %>
-				</div>
+  				<%= render :partial => 'items/search' %>
 		</div>
+	
 
+	<p class="cart">
+	<%= render :partial => '/cart/cart', :locals => { :cart => @cart } %>
+	</div>
 
-            
-           
-			
-
-            <div id="categories">
+        <div id="categories">
 			<div class="box">
-            		<h2 class="BoxHeaders">Categories</h2>
-            		<%= render '/items/categoryDistinctList' %>
-					</div>
-					</div>
+            		<h2>Categories</h2>
+			<%= render '/items/categoryDistinctList' %>
+			</div>
+	</div>
             	
 				
 				
-				            <div id='second-column'>
+	<div id='second-column'>
             	<div class="box">
-            		<h2 class="BoxHeaders">Sample Site</h2>
+            		<h2 class="BoxHeaders">Most Popular Template</h2>
             		<img src="/assets/adventure_sport.jpg" name="Rotating" id="Rotating1" alt="Adventure Sport">
 
             		<script type="text/javascript">
